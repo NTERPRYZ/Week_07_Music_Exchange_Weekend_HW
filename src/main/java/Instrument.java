@@ -23,7 +23,7 @@ public abstract class Instrument implements IPlayable {
         return this.instrumentColour;
     }
 
-    public String play(String data){
+    public String play(){
         return "I'm a " + instrumentType + " type instrument and I can Be played";
     }
 }

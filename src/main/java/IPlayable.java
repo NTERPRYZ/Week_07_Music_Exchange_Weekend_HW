@@ -1,4 +1,4 @@
 public interface IPlayable {
 
-    String play(String data);
+    String play();
 }

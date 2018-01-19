@@ -34,6 +34,6 @@ public class GuitarTest {
 
     @Test
     public void guitarCanBePlayed(){
-        assertEquals("I'm a String type instrument and I can Be played", guitar.play("String"));
+        assertEquals("I'm a STRING type instrument and I can Be played", guitar.play());
     }
 }
