@@ -9,7 +9,7 @@ public class TrumpetTest {
 
     @Before
     public void before(){
-        trumpet = new Trumpet(InstrumentType.BRASS, InstrumentMaterial.METAL, InstrumentColour.GOLD, 3);
+        trumpet = new Trumpet(InstrumentType.BRASS, InstrumentMaterial.METAL, InstrumentColour.GOLD, 100, 150, 3);
     }
 
     @Test
@@ -35,5 +35,20 @@ public class TrumpetTest {
     @Test
     public void guitarCanBePlayed(){
         assertEquals("I'm a BRASS type instrument and I can Be played", trumpet.play());
+    }
+
+    @Test
+    public void canGetBuyingPrice(){
+        assertEquals(100, trumpet.getBuyingPrice());
+    }
+
+    @Test
+    public void canGetSellingingPrice(){
+        assertEquals(150, trumpet.getSellingPrice());
+    }
+
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(50, trumpet.calculateMarkUp());
     }
 }

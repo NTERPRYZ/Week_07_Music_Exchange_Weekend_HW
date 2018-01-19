@@ -9,7 +9,7 @@ public class RecorderTest {
 
     @Before
     public void before(){
-        recorder = new Recorder(InstrumentType.WIND, InstrumentMaterial.PLASTIC, InstrumentColour.WHITE, 8);
+        recorder = new Recorder(InstrumentType.WIND, InstrumentMaterial.PLASTIC, InstrumentColour.WHITE, 5, 10, 8);
     }
 
     @Test
@@ -35,5 +35,20 @@ public class RecorderTest {
     @Test
     public void guitarCanBePlayed(){
         assertEquals("I'm a WIND type instrument and I can Be played", recorder.play());
+    }
+
+    @Test
+    public void canGetBuyingPrice(){
+        assertEquals(5, recorder.getBuyingPrice());
+    }
+
+    @Test
+    public void canGetSellingingPrice(){
+        assertEquals(10, recorder.getSellingPrice());
+    }
+
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(5, recorder.calculateMarkUp());
     }
 }
